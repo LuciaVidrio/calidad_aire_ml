@@ -72,3 +72,5 @@ El modelo predice **PM2.5** con un 80% de precisión, pero hay variabilidad en v
 1️⃣ Scikit-Learn: [https://scikit-learn.org](https://scikit-learn.org)  
 2️⃣ Pandas: [https://pandas.pydata.org](https://pandas.pydata.org)  
 3️⃣ Dataset proporcionado por la Red de Monitoreo de Calidad del Aire  
+
+Presentación: https://view.genially.com/67cd392b9aef34da5e765b4e/video-presentation-calidad-del-aire
