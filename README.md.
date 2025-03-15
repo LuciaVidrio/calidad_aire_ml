@@ -1,0 +1,74 @@
+# 📌 Predicción de Calidad del Aire con Machine Learning
+
+## 📌 Introducción
+En este proyecto se aplican técnicas de **Machine Learning** para analizar y predecir la calidad del aire en una ciudad metropolitana. Se utilizan modelos de regresión, reducción de dimensionalidad y clustering.
+
+## 🎯 Objetivos
+✔️ Limpiar y transformar los datos eliminando valores atípicos y faltantes.  
+✔️ Analizar la correlación entre contaminantes y variables meteorológicas.  
+✔️ Implementar un modelo de **Random Forest** para predecir **PM2.5**.  
+✔️ Aplicar **PCA** para reducción de dimensionalidad y **K-Means** para clustering.  
+✔️ Evaluar el rendimiento del modelo con **MSE y R²**.
+
+---
+
+## 📊 Descripción del Dataset
+Los datos provienen de estaciones de monitoreo y contienen mediciones horarias de contaminantes atmosféricos y variables climáticas.
+
+🔹 **Columnas principales:**
+- `FECHA`, `HORA`, `ESTACION`
+- Contaminantes: `CO`, `NO`, `NO2`, `NOX`, `O3`, `PM10`, `PM25`, `PMCO`, `SO2`
+- Variables meteorológicas: `RH` (Humedad), `TMP` (Temperatura), `WDR` (Dirección del viento), `WSP` (Velocidad del viento)
+
+📌 **Total de datos:** 291,072 registros  
+📌 **Periodo:** Año 2023  
+
+---
+
+## 🛠️ Análisis Exploratorio
+1️⃣ **Limpieza de datos**  
+   - Conversión de fechas a formato datetime  
+   - Eliminación de valores atípicos (-99.0)  
+   - Relleno de valores nulos con la media  
+
+2️⃣ **Visualización de datos**  
+   - Histogramas de distribución de contaminantes  
+   - Serie temporal de **PM2.5**  
+   - Matriz de correlación  
+
+📌 **Hallazgos:**  
+- `NOX`, `NO2` y `NO` tienen alta correlación.  
+- `PM2.5` varía en el tiempo con picos notables en ciertos meses.  
+
+---
+
+## 🤖 Implementación de Modelos de Machine Learning
+### **1️⃣ Modelo de Regresión (Random Forest)**
+- Se entrenó un **Random Forest Regressor** para predecir `PM2.5`.  
+- Métricas de rendimiento:
+  - **MSE:** 41.74  
+  - **R²:** 0.80  
+
+📌 **Conclusión:**  
+El modelo predice **PM2.5** con un 80% de precisión, pero hay variabilidad en valores extremos.
+
+---
+
+### **2️⃣ PCA y Clustering con K-Means**
+- Se aplicó **PCA** para reducir la dimensionalidad de los datos.  
+- Se usó **K-Means** para agrupar estaciones de monitoreo en 3 clusters.  
+- Se identificaron patrones distintos en la contaminación del aire.
+
+---
+
+## 📌 Conclusiones y Recomendaciones
+✔️ El modelo de Random Forest es efectivo pero se pueden probar otros modelos como XGBoost.  
+✔️ Se recomienda mejorar la calidad del dataset con más datos meteorológicos.  
+✔️ Se pueden aplicar técnicas de series temporales para mejorar predicciones.
+
+---
+
+## 📚 Referencias
+1️⃣ Scikit-Learn: [https://scikit-learn.org](https://scikit-learn.org)  
+2️⃣ Pandas: [https://pandas.pydata.org](https://pandas.pydata.org)  
+3️⃣ Dataset proporcionado por la Red de Monitoreo de Calidad del Aire  
